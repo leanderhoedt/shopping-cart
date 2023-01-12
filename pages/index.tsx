@@ -15,7 +15,7 @@ const Home = () => {
       </Head>
       <main className="flex flex-col justify-center items-center h-full bg-gray-900">
         <button
-          onClick={() => dispatch(addToCart({}))}
+          onClick={() => dispatch(addToCart())}
           className="absolute top-0 mb-5 bg-gray-50 rounded-md px-2 py-2"
         >
           ADD
