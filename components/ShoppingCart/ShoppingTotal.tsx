@@ -5,7 +5,6 @@ const ShoppingTotal = () => {
   const cart = useSelector(selectCartState);
   const getTotal = () => {
     let total = 0;
-    debugger
     cart?.cart?.forEach(({price, quantity}) => total += price * quantity);
     return total;
   }

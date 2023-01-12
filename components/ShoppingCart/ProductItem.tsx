@@ -33,12 +33,9 @@ const ProductItem = ({id, name, quantity, inStock}: ProductItemProps) => {
             >
               <span className="m-auto text-2xl">-</span>
             </button>
-            <input
-              type="number"
-              className="outline-none focus:outline-none text-center w-full font-semibold text-md hover:text-black focus:text-black md:text-basecursor-default flex items-center text-gray-700 outline-none"
-              value={quantity}
-              onChange={(e) => setQuantity(e.target.value)}
-            />
+            <span
+              className="flex justify-center outline-none focus:outline-none text-center w-full font-semibold text-md hover:text-black focus:text-black md:text-basecursor-default flex items-center text-gray-700 outline-none"
+            >{quantity}</span>
             <button
               disabled={quantity >= inStock}
               className="text-gray-700 bg-gray-100 hover:text-gray-800 hover:bg-gray-200 disabled:bg-gray-50 h-full w-20 rounded-r cursor-pointer"
