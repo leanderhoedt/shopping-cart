@@ -36,7 +36,7 @@ export const cartSlice = createSlice({
     },
     incrementQuantity: (state, {payload: {id} = {}}) => {
       const itemInCart = state.cart.find((item) => item.id === id);
-      if (itemInCart && itemInCart.quantity < 5) {
+      if (itemInCart && itemInCart.quantity < itemInCart.inStock) {
         itemInCart && itemInCart.quantity++;
       }
     },
@@ -47,10 +47,8 @@ export const cartSlice = createSlice({
       }
     },
     setQuantity: (state, {payload: {id, quantity} = {}}) => {
-      console.log(quantity);
-      console.log(quantity);
       const itemInCart = state.cart.find((item) => item.id === id);
-      if (itemInCart && quantity > 0 && quantity <= 5) {
+      if (itemInCart && quantity > 0 && quantity <= itemInCart.inStock) {
         itemInCart.quantity = quantity;
       }
     },

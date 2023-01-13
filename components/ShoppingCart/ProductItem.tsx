@@ -1,5 +1,5 @@
 import {useDispatch} from 'react-redux';
-import {decrementQuantity, incrementQuantity, removeFromCart, setQuantity} from '../../store/cartSlice';
+import {decrementQuantity, incrementQuantity, removeFromCart} from '../../store/cartSlice';
 
 interface ProductItemProps {
   id: string;

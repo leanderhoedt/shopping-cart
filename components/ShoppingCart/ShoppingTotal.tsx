@@ -6,8 +6,9 @@ const ShoppingTotal = () => {
   const getTotal = () => {
     let total = 0;
     cart?.cart?.forEach(({price, quantity}) => total += price * quantity);
-    return total;
+    return total.toFixed(2);
   }
+
   return (
     <div className="pt-5 flex justify-between">
       <span className="font-semibold text-1xl">Total</span>
